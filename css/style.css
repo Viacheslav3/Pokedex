@@ -1,3 +1,4 @@
+
 /* -------------------------------- 
 
 Primary style
@@ -5,7 +6,6 @@ Primary style
 -------------------------------- */
 *, *::after, *::before {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -105,7 +105,8 @@ xtab-filter
 -------------------------------- */
 .cd-tab-filter-wrapper {
   background-color: #ffffff;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
   z-index: 1;
 }
 .cd-tab-filter-wrapper:after {
@@ -130,16 +131,14 @@ xtab-filter
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
   display: inline-block;
   width: 16px;
   height: 16px;
   background: url("../img/cd-icon-arrow.svg") no-repeat center center;
   -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
   pointer-events: none;
 }
@@ -148,7 +147,8 @@ xtab-filter
   top: 0;
   left: 0;
   background-color: #ffffff;
-  box-shadow: inset 0 -2px 0 #41307c;
+  -webkit-box-shadow: inset 0 -2px 0 #41307c;
+          box-shadow: inset 0 -2px 0 #41307c;
 }
 .cd-tab-filter li {
   display: none;
@@ -172,13 +172,12 @@ xtab-filter
 .cd-tab-filter.is-open::after {
   /* small arrow rotation */
   -webkit-transform: translateY(-50%) rotate(-180deg);
-  -moz-transform: translateY(-50%) rotate(-180deg);
   -ms-transform: translateY(-50%) rotate(-180deg);
-  -o-transform: translateY(-50%) rotate(-180deg);
   transform: translateY(-50%) rotate(-180deg);
 }
 .cd-tab-filter.is-open ul {
-  box-shadow: inset 0 -2px 0 #41307c, 0 2px 10px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 -2px 0 #41307c, 0 2px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 -2px 0 #41307c, 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 .cd-tab-filter.is-open ul li {
   display: block;
@@ -200,7 +199,8 @@ xtab-filter
   .cd-tab-filter ul {
     background: transparent;
     position: static;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     text-align: center;
   }
   .cd-tab-filter li {
@@ -225,7 +225,8 @@ xtab-filter
     background: transparent;
     color: #41307c;
     /* create border bottom using box-shadow property */
-    box-shadow: inset 0 -2px 0 #41307c;
+    -webkit-box-shadow: inset 0 -2px 0 #41307c;
+            box-shadow: inset 0 -2px 0 #41307c;
   }
   .cd-tab-filter.is-open ul li {
     display: inline-block;
@@ -238,7 +239,7 @@ xtab-filter
     float: right;
     margin: 0;
     -webkit-transition: width 0.3s;
-    -moz-transition: width 0.3s;
+    -o-transition: width 0.3s;
     transition: width 0.3s;
   }
   .cd-tab-filter.filter-is-visible {
@@ -253,13 +254,17 @@ xgallery
 
 -------------------------------- */
 .cd-gallery {
-  padding: 26px 5%;
+  padding: 35px 5%;
   width: 100%;
+  margin: 15px;
 }
 .cd-gallery li {
   margin-bottom: 1.6em;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
   display: none;
+  text-transform: uppercase;
+  padding: 20px;
 }
 .cd-gallery li.gap {
   /* used in combination with text-align: justify to align gallery elements */
@@ -297,7 +302,7 @@ xgallery
     padding: 50px 2%;
     float: right;
     -webkit-transition: width 0.3s;
-    -moz-transition: width 0.3s;
+    -o-transition: width 0.3s;
     transition: width 0.3s;
   }
   .cd-gallery li {
@@ -321,24 +326,24 @@ xfilter
   width: 280px;
   height: 100%;
   background: #ffffff;
-  box-shadow: 4px 4px 20px transparent;
+  -webkit-box-shadow: 4px 4px 20px transparent;
+          box-shadow: 4px 4px 20px transparent;
   z-index: 2;
   /* Force Hardware Acceleration in WebKit */
   -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
-  -o-transform: translateX(-100%);
   transform: translateX(-100%);
   -webkit-transition: -webkit-transform 0.3s, box-shadow 0.3s;
-  -moz-transition: -moz-transform 0.3s, box-shadow 0.3s;
+  -webkit-transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+  transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+  -o-transition: transform 0.3s, box-shadow 0.3s;
   transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
 }
 .cd-filter::before {
   /* top colored bar */
@@ -367,7 +372,7 @@ xfilter
   background: #37296a;
   opacity: 0;
   -webkit-transition: opacity 0.3s;
-  -moz-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
   z-index: 3;
 }
@@ -376,11 +381,10 @@ xfilter
 }
 .cd-filter.filter-is-visible {
   -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
   -ms-transform: translateX(0);
-  -o-transform: translateX(0);
   transform: translateX(0);
-  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
 }
 .cd-filter.filter-is-visible .cd-close {
   opacity: 1;
@@ -424,7 +428,7 @@ xfilter
     padding-left: 24px;
     background-position: left center;
     -webkit-transition: color 0.3s;
-    -moz-transition: color 0.3s;
+    -o-transition: color 0.3s;
     transition: color 0.3s;
   }
   .no-touch .cd-filter-trigger:hover {
@@ -471,19 +475,17 @@ xcustom form elements
   height: 16px;
   background: url("../img/cd-icon-arrow.svg") no-repeat center center;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
   -webkit-transition: -webkit-transform 0.3s;
-  -moz-transition: -moz-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
   transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 .cd-filter-block h4.closed::before {
   -webkit-transform: translateY(-50%) rotate(-90deg);
-  -moz-transform: translateY(-50%) rotate(-90deg);
   -ms-transform: translateY(-50%) rotate(-90deg);
-  -o-transform: translateY(-50%) rotate(-90deg);
   transform: translateY(-50%) rotate(-90deg);
 }
 .cd-filter-block input, .cd-filter-block select,
@@ -505,7 +507,8 @@ xcustom form elements
   -ms-appearance: none;
   -o-appearance: none;
   appearance: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .cd-filter-block input[type='search']:focus,
 .cd-filter-block input[type='text']:focus,
@@ -536,9 +539,7 @@ xcustom form elements
   right: 14px;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
   display: block;
   width: 16px;
@@ -589,9 +590,7 @@ xcustom form elements
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 .cd-filter-block .checkbox-label::before,
